@@ -6,6 +6,5 @@ while true; do
 	b=$(( ${RANDOM} % 10 ))
 	rm ${b} && echo "$(date + %H:%M) ${b}: removido!" 
 done
-#./ex6.sh &>> saida.txt | tee b.txt | tr ':' '-' < saida.txt
-
+#./ex6.sh &>> saida.txt |& tee saida.txt | tr ':' '-' < saida.txt
 

@@ -8,3 +8,4 @@ while true; do
 	rm ${b} 2>> 2.log 3.log && echo "$(date + %H:%M) ${b}: removido!" &>> 1.log 
 	cat 1.log &>> 3.log | cat 2.log &>> 3.log
 done
+#comando ./ex5a.sh >> 3.log 2>> 3.log

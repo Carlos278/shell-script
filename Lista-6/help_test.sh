@@ -32,6 +32,7 @@ if [ $# > 0 ]; then
 			 echo "test -f /home/aluno/Lista-6/. , verifica se o arquivo existe e é um arquivo comum"
 			 echo "test -r /home/aluno/Lista-6/. , verifica se o arquivo existe e se é permitida a leitura do mesmo"
 			 echo "test -L /home/aluno/Lista-6/. , verifica se o arquivo existe e é um link simbólico"
+		         echo "test -x /home/aluno/Lista-6/help_test.sh, verifica se o arquivo existe e a permissão de executar é garantida."
 		fi
 
 	done

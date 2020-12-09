@@ -19,9 +19,9 @@ function menor {
 	fi
 }
 
-read -p "Digite os números: " a b
-ma=$(maior $a $b)
-echo $ma
-read -p "Digite os números: " a b
-me=$(menor $a $b)
-echo $me
+#read -p "Digite os números: " a b
+#ma=$(maior $a $b)
+#echo $ma
+#read -p "Digite os números: " a b
+#me=$(menor $a $b)
+#echo $me

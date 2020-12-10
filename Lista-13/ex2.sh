@@ -5,14 +5,28 @@ colum=$(awk -F " " '{print NF}' a.txt)
 declare -A array
 key=0
 field=1
-while read line; do
-	num=$(echo $line | cut -d' ' -f$field)
-	echo $num
-	array[$cont]=$num
+for ((i=0; i<$colum;i++)); do
+	aux=$(cut -d ' ' -f${field} a.txt) 
+	array[$i]=$aux
 	key=$(($key+1))
 	field=$(($field+1))
 done < a.txt
-echo $key
-echo $field
-echo ${array[0]}
 rm a.txt
+ma=${array[0]}
+me=${array[0]}
+for i in ${array[*]}; do
+	if [[ $i -lt $me ]]; then
+		me=$i
+	fi
+
+done
+for i in ${array[*]}; do
+	if [[ $i -gt $ma ]]; then
+		ma=$i
+	fi
+
+done
+
+echo "$(maior $me $ma) é o maior"
+echo "$(menor $me $ma) é o menor"
+

@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo cp ex1.sh /etc/profile.d/random_phrase.sh
 echo $(date +%d/%m/%y)
 op=$(( ( $RANDOM % 5 ) +1 ))
 case $op in
@@ -18,3 +19,4 @@ case $op in
 		echo "O dia está chato..."
 		;;
 esac
+
